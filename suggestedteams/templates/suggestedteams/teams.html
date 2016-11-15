@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% load staticfiles %}
+	<!-- Bootstrap Core CSS -->
+	<link rel='stylesheet' href='{% static 'css/bootstrap.min.css' %}' type = "text/css"/>
+
+  <!-- Custom CSS -->
+	<link rel='stylesheet' href='{% static 'css/charts.css' %}' type = "text/css"/>
+	<link rel='stylesheet' href= '{% static 'css/sb-admin.css' %}' type = "text/css"/>
+
+	<!-- Custom Fonts -->
+	<link rel='stylesheet' href= '{% static 'css/reset.css' %}' type = "text/css"/>
+	<link rel='stylesheet' href= '{% static 'css/availability-calendar.css' %}' type = "text/css"/>
+	<link rel='stylesheet' href= '{% static 'css/style.css' %}' type = "text/css"/> <!-- Resource style -->
+	<link rel='stylesheet' href= '{% static 'css/font-awesome/css/font-awesome.min.css' %}' type = "text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+	<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+	<script src="{% static 'js/modernizr.js' %}"></script>
+	<script src="{% static 'js/availability-calendar.js' %}"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+	</style>
+
+	<!-- Modernizr -->
+
+</head>
+<body>
+	<div>
+		{% block content %}
+		{% endblock %}
+	</div>
+
+  <div id="hey">
+    hey
+  </div>
+
+	<div class="col-md-8">
+		<main class="cd-main-content">
+			<div class="row">
+				<font size="5" style="font-family: 'Shrikhand', cursive; float: left; padding-left: 40px;">Suggested Teams</font>
+			</div>
+
+			<!-- <h1>Slide In Panel</h1> -->
+			<div class="row">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								Team 1
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<button class="collapseRow" data-toggle="collapse" data-target="#collapse1">
+									<i class="fa fa-chevron-down"></i>
+								</button>
+								<a class="calendar" href="#">
+									<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+								</a>
+								<p class="percent">
+									x%
+								</p>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<div class="col-md-3">
+										<font size="3" color="black" style="font-family: 'Shrikhand', cursive;">Name</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;vertical-align: middle;">Availability</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Commitment</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Role</font>
+									</div>
+								</li>
+								<li class="list-group-item">One</li>
+								<li class="list-group-item">Two</li>
+								<li class="list-group-item">Three</li>
+							</ul>
+							<!-- <div class="panel-footer">Footer</div> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								Team 1
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<button class="collapseRow" data-toggle="collapse" data-target="#collapse1">
+									<i class="fa fa-chevron-down"></i>
+								</button>
+								<a class="calendar" href="#">
+									<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+								</a>
+								<p class="percent">
+									x%
+								</p>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<div class="col-md-3">
+										<font size="3" color="black" style="font-family: 'Shrikhand', cursive;">Name</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;vertical-align: middle;">Availability</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Commitment</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Role</font>
+									</div>
+								</li>
+								<li class="list-group-item">One</li>
+								<li class="list-group-item">Two</li>
+								<li class="list-group-item">Three</li>
+							</ul>
+							<!-- <div class="panel-footer">Footer</div> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								Team 1
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<button class="collapseRow" data-toggle="collapse" data-target="#collapse1">
+									<i class="fa fa-chevron-down"></i>
+								</button>
+								<a class="calendar" href="#">
+									<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+								</a>
+								<p class="percent">
+									x%
+								</p>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<div class="col-md-3">
+										<font size="3" color="black" style="font-family: 'Shrikhand', cursive;">Name</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;vertical-align: middle;">Availability</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Commitment</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Role</font>
+									</div>
+								</li>
+								<li class="list-group-item">One</li>
+								<li class="list-group-item">Two</li>
+								<li class="list-group-item">Three</li>
+							</ul>
+							<!-- <div class="panel-footer">Footer</div> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								Team 1
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<button class="collapseRow" data-toggle="collapse" data-target="#collapse1">
+									<i class="fa fa-chevron-down"></i>
+								</button>
+								<a class="calendar" href="#">
+									<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+								</a>
+								<p class="percent">
+									x%
+								</p>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<div class="col-md-3">
+										<font size="3" color="black" style="font-family: 'Shrikhand', cursive;">Name</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;vertical-align: middle;">Availability</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Commitment</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Shrikhand', cursive;">Role</font>
+									</div>
+								</li>
+								<li class="list-group-item">One</li>
+								<li class="list-group-item">Two</li>
+								<li class="list-group-item">Three</li>
+							</ul>
+							<!-- <div class="panel-footer">Footer</div> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+
+			<div class="container" style="width: 100%">
+				<table class="table table-hover" style="width: 100%">
+					<tbody>
+						<tr>
+							<td><div class="col-md-4">
+								<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Students not on a team</font>
+							</div></td>
+							<td><div class="col-md-4">
+								<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Suggested Teams</font>
+							</div></td>
+							<td>
+								<div class="col-md-4">
+									<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Action</font>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div class="col-md-4">
+								<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Andrew Le</font>
+							</div></td>
+							<td><div class="col-md-4">
+								<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Team 2</font>
+							</div></td>
+							<td>
+								<div class="col-md-4">
+									<div class="dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+											<span class="caret"></span></button>
+											<ul class="dropdown-menu">
+												<li><a tabindex="-1" href="#">HTML</a></li>
+												<li><a tabindex="-1" href="#">CSS</a></li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+													<ul class="dropdown-menu">
+														<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+														<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+														<li class="dropdown-submenu">
+															<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+															<ul class="dropdown-menu">
+																<li><a href="#">3rd level dropdown</a></li>
+																<li><a href="#">3rd level dropdown</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</td>
+
+
+								</tr>
+								<tr>
+									<td><div class="col-md-4">
+										<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Mark Durbin</font>
+									</div></td>
+									<td><div class="col-md-4">
+										<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Team 2</font>
+									</div></td>
+									<td>
+										<div class="col-md-4">
+											<div class="dropdown">
+												<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+													<span class="caret"></span></button>
+													<ul class="dropdown-menu">
+														<li><a tabindex="-1" href="#">HTML</a></li>
+														<li><a tabindex="-1" href="#">CSS</a></li>
+														<li class="dropdown-submenu">
+															<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+															<ul class="dropdown-menu">
+																<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+																<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+																<li class="dropdown-submenu">
+																	<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+																	<ul class="dropdown-menu">
+																		<li><a href="#">3rd level dropdown</a></li>
+																		<li><a href="#">3rd level dropdown</a></li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</td>
+
+
+										</tr>
+										<tr>
+											<td><div class="col-md-4">
+												<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Brianna Forte</font>
+											</div></td>
+											<td><div class="col-md-4">
+												<font color="#0c3054" style="font-family: 'Roboto', sans-serif;">Team 2</font>
+											</div></td>
+											<td>
+												<div class="col-md-4">
+													<div class="dropdown">
+														<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+															<span class="caret"></span></button>
+															<ul class="dropdown-menu">
+																<li><a tabindex="-1" href="#">HTML</a></li>
+																<li><a tabindex="-1" href="#">CSS</a></li>
+																<li class="dropdown-submenu">
+																	<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+																	<ul class="dropdown-menu">
+																		<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+																		<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+																		<li class="dropdown-submenu">
+																			<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+																			<ul class="dropdown-menu">
+																				<li><a href="#">3rd level dropdown</a></li>
+																				<li><a href="#">3rd level dropdown</a></li>
+																			</ul>
+																		</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+
+												</td>
+
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+
+								<a href="#0" class="cd-btn">Swap</a>
+								<!-- your content here -->
+							</main>
+
+							<div class="cd-panel from-right">
+								<header class="cd-panel-header">
+									<h1>Swap team members</h1>
+									<a href="#0" class="cd-panel-close">Close</a>
+								</header>
+
+								<div class="cd-panel-container">
+									<div class="cd-panel-content">
+										<div class="row">
+											<div class="col-md-6">
+												<img style="width:30px;height:30px;vertical-align:middle" src="http://lorempixel.com/output/abstract-q-c-640-480-8.jpg">
+												<span><font style="font-family: 'Shrikhand', cursive; color: black">Carolyn Thio</font></span>
+						<!-- <div class="col-md-6">
+							<img src="headshot.jpg" style="height: 80px;width: 80px">
+						</div>
+
+						<div class="col-md-6">
+							<font size="2" color="blue" style="vertical-align: middle;">This is some text!</font>
+						</div> -->
+					</div>
+
+
+
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<div id="calendar"></div>
+						<!-- <script>
+							var unavailableDates = [
+							{start: '2015-09-11', end: '2015-09-15'},
+							{start: '2015-09-15', end: '2015-09-23'},
+							{start: '2015-10-01', end: '2015-10-07'}
+							];
+							$('#calendar').availabilityCalendar(unavailableDates);
+
+						</script> -->
+					</div>
+
+				</div>
+				<hr>
+
+			</div> <!-- cd-panel-content -->
+		</div> <!-- cd-panel-container -->
+	</div> <!-- cd-panel -->
+</div>
+</body>
+
+<script>
+						/* When the user clicks on the button,
+						toggle between hiding and showing the dropdown content */
+						function myFunction() {
+							document.getElementById("myDropdown").classList.toggle("show");
+						}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
+}
+$(document).ready(function(){
+	$('.dropdown-submenu a.test').on("click", function(e){
+		$(this).next('ul').toggle();
+		e.stopPropagation();
+		e.preventDefault();
+	});
+});
+</script>
+</html>

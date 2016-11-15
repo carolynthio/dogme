@@ -1,0 +1,218 @@
+#div1, #div2, #div3{
+  float: left;
+  width: 500px;
+  height: 350px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #FFFFFF;
+}
+
+.student_image {
+  height: 30px;
+  width: 30px;
+  /*float: left;*/
+}
+
+.collapseRow, .calendar, .percent {
+  float: right;
+  margin-right: 10px;
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #979797;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+}
+#headline {
+  border-radius: 15px;
+  border: 2px solid #979797;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #2B3F54;
+  margin-bottom: 10px;
+}
+.menu{display:block;width:30px;height:30px;border-radius:50px;border: 1px solid #979797; float: right;font-size:4;color:#979797;line-height:30px;margin-top: 10px;margin-right: 5px;text-align:center;text-decoration:none;background:#fff}
+.menu:hover{color:#ffffff;text-decoration:none;background:#2B3F54}
+.headerDivider {
+  border-left:1px solid #979797;
+  border-right:1px solid #979797;
+  height:800px;
+  position:absolute;
+
+
+}
+#hidden {
+  border-radius: 25px;
+  border: 2px solid #979797;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  float: right;
+  height:350px;
+  width:50%;
+  z-index:2;
+  position:absolute;
+  right:-1000px;
+}
+
+.left, .hidden {
+  float: left;
+  height:350px;
+}
+
+.left {
+  width: 100%;
+  background: #fff;
+  z-index:1;
+}
+
+.hidden {
+  width:50%;
+  z-index:2;
+  position:absolute;
+  left:-1000px;
+  background:#f90;
+  color:#000;
+}
+.clear {
+  clear:both;
+}
+table {
+  font-family: "Helevitca Neue", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border-radius: 25px;
+  border: 1px solid #FFFFFF;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Nav Bar */
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+ @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+ body {
+    background: none repeat scroll 0 0 white;
+}
+nav.sidebar-menu-collapsed {
+    width: 44px;
+}
+nav.sidebar-menu-expanded {
+    width: auto;
+}
+nav.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: none repeat scroll 0 0 #2B3F54;
+    color: white;
+    padding: 20px 10px;
+    z-index: 1030;
+}
+nav.sidebar a#justify-icon {
+    outline: 0;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+}
+nav.sidebar a#logout-icon {
+    outline: 0;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+nav.sidebar ul.level1 {
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+}
+nav.sidebar ul.level1 li {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    list-style-type: none;
+}
+nav.sidebar ul.level1 li a.expandable {
+    outline: 0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    padding: 4px 4px 4px 0px;
+    font-size: 20px;
+}
+nav.sidebar ul.level1 li a.expandable:hover {
+    color: #bbbbbb;
+}
+nav.sidebar ul.level1 li a.expandable span.expanded-element {
+    display: none;
+    font-size: 11px;
+    position: relative;
+    bottom: 5px;
+}
+nav.sidebar ul.level1 li.active {
+    margin-left: -4px;
+}
+nav.sidebar ul.level1 li.active a.expandable {
+    background: none repeat scroll 0 0 black;
+    border-radius: 4px;
+    color: white !important;
+    width: 30px;
+    padding: 4px;
+}
+nav.sidebar ul.level1 li.active a.expandable:hover {
+    color: white !important;
+}
+nav.sidebar ul.level1 ul.level2 {
+    margin: 20px 6px 20px 30px;
+    padding: 0;
+    display: none;
+}
+nav.sidebar ul.level1 ul.level2 li {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    list-style-type: none;
+    border-bottom: solid white 1px;
+}
+nav.sidebar ul.level1 ul.level2 li:last-child {
+    border-bottom: none;
+}
+nav.sidebar ul.level1 ul.level2 li a {
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+}
+/* end nav bar */
+
+/* Top bar */
+#titlebar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:50px;
+  background-color:#EDEDED;
+  z-index: 20;
+}
+
+.panel-heading{
+  background-color: #FFFFFF !important;
+}

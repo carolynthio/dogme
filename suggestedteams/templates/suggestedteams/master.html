@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% load staticfiles %}
+	<!-- Bootstrap Core CSS -->
+	<link rel='stylesheet' href='{% static 'css/bootstrap.min.css' %}' type = "text/css"/>
+
+  <!-- Custom CSS -->
+	<link rel='stylesheet' href='{% static 'css/charts.css' %}' type = "text/css"/>
+	<link rel='stylesheet' href= '{% static 'css/sb-admin.css' %}' type = "text/css"/>
+
+	<!-- Custom Fonts -->
+	<link rel='stylesheet' href= '{% static 'css/reset.css' %}' type = "text/css"/>
+	<link rel='stylesheet' href= '{% static 'css/availability-calendar.css' %}' type = "text/css"/>
+	<link rel='stylesheet' href= '{% static 'css/style.css' %}' type = "text/css"/> <!-- Resource style -->
+	<link rel='stylesheet' href= '{% static 'css/font-awesome/css/font-awesome.min.css' %}' type = "text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
+
+	<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+	<script src="{% static 'js/modernizr.js' %}"></script>
+	<script src="{% static 'js/availability-calendar.js' %}"></script>
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+	<!-- Modernizr -->
+
+</head>
+<body>
+	<!-- <div>
+		{% block content %}
+		{% endblock %}
+	</div> -->
+	<div id="titlebar">
+	<font size="5" style="font-family: 'Helevitca Neue'; padding-left: 100px;padding-top: 20px; color: #2B3F54">
+		TFTi
+	</font>
+	</div>
+
+	<nav class='sidebar sidebar-menu-collapsed'> <a href='#' id='justify-icon'>
+      <span class='glyphicon glyphicon-align-justify'></span>
+    </a>
+
+      <ul class='level1'>
+          <li class='active'> <a class='expandable' href='#' title='Dashboard'>
+          <span class='glyphicon glyphicon-home collapsed-element'></span>
+          <span class='expanded-element'>Dashboard</span>
+        </a>
+
+              <ul class='level2'>
+                  <li> <a href='#' title='Traffic'>Traffic</a>
+
+                  </li>
+                  <li> <a href='#' title='Conversion rate'>Conversion rate</a>
+
+                  </li>
+                  <li> <a href='#' title='Purchases'>Purchases</a>
+
+                  </li>
+              </ul>
+          </li>
+          <li> <a class='expandable' href='#' title='APIs'>
+          <span class='glyphicon glyphicon-wrench collapsed-element'></span>
+          <span class='expanded-element'>APIs</span>
+        </a>
+
+          </li>
+          <li> <a class='expandable' href='#' title='Settings'>
+          <span class='glyphicon glyphicon-cog collapsed-element'></span>
+          <span class='expanded-element'>Settings</span>
+        </a>
+
+          </li>
+          <li> <a class='expandable' href='#' title='Account'>
+          <span class='glyphicon glyphicon-user collapsed-element'></span>
+          <span class='expanded-element'>Account</span>
+        </a>
+
+          </li>
+      </ul> <a href='#' id='logout-icon' title='Logout'>
+      <span class='glyphicon glyphicon-off'></span>
+    </a>
+
+  </nav>
+	<div class="col-md-7" style="padding-left: 100px; padding-top: 50px;">
+		<main class="cd-main-content">
+			<div class="row">
+				<font size="5" style="font-family: 'Helevitca Neue'; float: left; padding-left: 10px;padding-top: 10px; padding-bottom: 10px; color: #2B3F54">Suggested Teams</font>
+
+				<a href="#" class="menu">3</a>
+				<a href="#" class="menu">2</a>
+				<a href="#" class="menu">1</a>
+			</div>
+
+
+			<!-- <h1>Slide In Panel</h1> -->
+			<div class="row">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<div style="float: left">Team 1 </div>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+								<img src="{% static 'headshot.jpg' %}" class="student_image"/>
+
+								<button id="chevron" class="collapseRow" data-toggle="collapse" data-target="#collapse1">
+									<i class="fa fa-chevron-down"></i>
+								</button>
+								<a class="calendar" href="#">
+									<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+								</a>
+								<p class="percent">
+									x%
+								</p>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<ul class="list-group">
+								<li class="list-group-item" style="height: 30px;">
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Helevitca Neue';">Name</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Helevitca Neue';vertical-align: middle;">Availability</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Helevitca Neue';">Commitment</font>
+									</div>
+									<div class="col-md-3">
+										<font color="black" style="font-family: 'Helevitca Neue';">Role</font>
+									</div>
+								</li>
+								<li class="list-group-item">One</li>
+								<li class="list-group-item">Two</li>
+								<li class="list-group-item">Three</li>
+							</ul>
+							<!-- <div class="panel-footer">Footer</div> -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<hr>
+			<div class="container" style="width: 100% border" id="headline" class="col-md-4">
+				<font size="3" style="font-family: 'Helevitca Neue'; float: left; padding-left: 10px; color: #FFFFFF">
+					Students Not on a Team
+				</font>
+				<font size="3" style="font-family: 'Helevitca Neue'; padding-left: 10px; color: #FFFFFF">
+					Suggested Team
+				</font>
+				<font size="3" style="font-family: 'Helevitca Neue'; float: right; padding-left: 10px; color: #FFFFFF">
+					Action
+				</font>
+			</div>
+
+			<div class="container" style="width: 100% border" id="rcorners2" class="col-md-4">
+
+			<table>
+				<tr>
+					<td>Magazzini Alimentari Riuniti</td>
+					<td>Giovanni Rovelli</td>
+					<td><div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select an action
+						</button>
+						<ul class="dropdown-menu">
+							<li><a tabindex="-1" href="#">Add to Suggested Team</a></li>
+							<li><a tabindex="-1" href="#">Add to Other Team</a></li>
+							<li class="dropdown-submenu">
+								<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+									<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+									<li class="dropdown-submenu">
+										<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">3rd level dropdown</a></li>
+											<li><a href="#">3rd level dropdown</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div></td>
+				</tr>
+			</table>
+
+		</div>
+
+		<a href="#0" class="cd-btn">Swap</a>
+		<div class="row"><a href="#" id="slide">Show/hide Slide Panel</a></div>
+		<!-- your content here -->
+	</main>
+
+	<div class="cd-panel from-right">
+		<header class="cd-panel-header">
+			<h1>Swap team members</h1>
+			<a href="#0" class="cd-panel-close">Close</a>
+		</header>
+
+		<div class="cd-panel-container">
+			<div class="cd-panel-content">
+				<div class="row">
+					<div class="col-md-6">
+						<img style="width:30px;height:30px;vertical-align:middle" src="http://lorempixel.com/output/abstract-q-c-640-480-8.jpg">
+						<span><font style="font-family: 'Shrikhand', cursive; color: black">Carolyn Thio</font></span>
+						<!-- <div class="col-md-6">
+							<img src="headshot.jpg" style="height: 80px;width: 80px">
+						</div>
+
+						<div class="col-md-6">
+							<font size="2" color="blue" style="vertical-align: middle;">This is some text!</font>
+						</div> -->
+					</div>
+
+
+
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<div id="calendar"></div>
+						<script>
+							var unavailableDates = [
+							{start: '2015-09-11', end: '2015-09-15'},
+							{start: '2015-09-15', end: '2015-09-23'},
+							{start: '2015-10-01', end: '2015-10-07'}
+							];
+							$('#calendar').availabilityCalendar(unavailableDates);
+
+						</script>
+					</div>
+
+				</div>
+				<hr>
+
+			</div> <!-- cd-panel-content -->
+		</div> <!-- cd-panel-container -->
+	</div> <!-- cd-panel -->
+</div>
+<div class="col-md-1">
+	<div class="headerDivider"></div>
+</div>
+
+<div class="col-md-4">
+
+	<div class="row">
+		<div class="w3-card" id="rcorners2" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 60px;right: 50px;background: #FFFFFF">
+			<div class="row" style="padding-top: 10px;">
+				<font size="3" style="padding-left: 25px;">View Constraints</font>
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="w3-card" id="hidden" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 40px;right: 50px;background: #FFFFFF;margin-top: 50px;">
+			<div class="row">
+				<font size="3" style="">View Constraints</font>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	</div
+
+</body>
+
+<script>
+						/* When the user clicks on the button,
+						toggle between hiding and showing the dropdown content */
+						function myFunction() {
+							document.getElementById("myDropdown").classList.toggle("show");
+						}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+	}
+}
+$(document).ready(function(){
+	$('#slide').click(function(){
+		var hidden = $('#hidden');
+		if (hidden.hasClass('visible')){
+			hidden.animate({"right":"-1000px"}, "slow").removeClass('visible');
+		} else {
+			hidden.animate({"right":"50px"}, "slow").addClass('visible');
+		}
+	});
+});
+
+
+</script>
+</html>
