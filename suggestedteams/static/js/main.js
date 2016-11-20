@@ -98,3 +98,91 @@ jQuery(document).ready(function($){
 
 }).call(this);
 // End Navigation Bar
+
+// Sending data to Firebase
+// $(document).ready(function() {
+// 	if(isAPIAvailable()) {
+// 		$('#files').bind('change', handleFileSelect);
+// 	}
+// });
+//
+// function isAPIAvailable() {
+//       // Check for the various File API support.
+//       if (window.File && window.FileReader && window.FileList && window.Blob) {
+//         // Great success! All the File APIs are supported.
+//         return true;
+//     } else {
+//         // source: File API availability - http://caniuse.com/#feat=fileapi
+//         // source: <output> availability - http://html5doctor.com/the-output-element/
+//         document.writeln('The HTML5 APIs used in this form are only available in the following browsers:<br />');
+//         // 6.0 File API & 13.0 <output>
+//         document.writeln(' - Google Chrome: 13.0 or later<br />');
+//         // 3.6 File API & 6.0 <output>
+//         document.writeln(' - Mozilla Firefox: 6.0 or later<br />');
+//         // 10.0 File API & 10.0 <output>
+//         document.writeln(' - Internet Explorer: Not supported (partial support expected in 10.0)<br />');
+//         // ? File API & 5.1 <output>
+//         document.writeln(' - Safari: Not supported<br />');
+//         // ? File API & 9.2 <output>
+//         document.writeln(' - Opera: Not supported');
+//         return false;
+//     }
+// }
+//
+// function handleFileSelect(evt) {
+//       var files = evt.target.files; // FileList object
+//       var file = files[0];
+//
+//       // read the file metadata
+//       var output = ''
+//       output += '<span style="font-weight:bold;">' + escape(file.name) + '</span><br />\n';
+//       output += ' - FileType: ' + (file.type || 'n/a') + '<br />\n';
+//       output += ' - FileSize: ' + file.size + ' bytes<br />\n';
+//       output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
+//
+//       // read the file contents
+//       printTable(file);
+//
+//       // post the results
+//       $('#list').append(output);
+//   }
+//
+//   function printTable(file) {
+//   	var reader = new FileReader();
+//   	reader.readAsText(file);
+//   	reader.onload = function(event){
+//   		var csv = event.target.result;
+//   		var data = $.csv.toArrays(csv);
+//
+//   		var studentRef = firebase.database().ref('student');
+//   		for(var row in data) {
+//   			var newStudentRef = studentRef.push();
+//   			var item = 0;
+//   			if(row!=0){
+//   				newStudentRef.set({
+//   					Name: data[row][item],
+//   					Sex: data[row][item+1],
+//   					GPA: data[row][item+2],
+//   					Schedule: data[row][item+3],
+//   					Age: data[row][item+4],
+//   					College: data[row][item+5],
+//   					Programming_Copy_1: data[row][item+6],
+//   					Drawing_Copy_1: data[row][item+7],
+//   					Leadership: data[row][item+8],
+//   					Leadership_Pref: data[row][item+9],
+//   					Car: data[row][item+10],
+//   					Committment: data[row][item+11],
+//   					Visual_Design: data[row][item+12],
+//   					English: data[row][item+13],
+//   					Language: data[row][item+14]
+//
+//   				});
+//
+//   			}
+//
+//
+//   		}
+//   	};
+//   	reader.onerror = function(){ alert('Unable to read ' + file.fileName); };
+//   }
+	// end Firebase

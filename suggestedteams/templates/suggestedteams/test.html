@@ -1,13 +1,44 @@
 {% extends "suggestedteams/master.html" %}
 
 {% block content %}
-{% for c in content %}
+<!-- {% for c in content %}
    <h1>{{c}}</h1>
 {% endfor %}
 
 {{ another.a }}
 {{ another.b }}
-{{ one }}
-<p>Hey, welcome to this page </p>
+{{ one }} -->
+{% for row in reader %}
+  {% if row.0 and row.0 != 'Name' %}
+    <!-- <li class="list-group-item">{{ row.0 }}</li> -->
+    <tr>
+      <td>{{ row.0 }}</td>
+      <td>Team 1</td>
+      <td style="float: right;"><div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select an action
+        </button>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Add to Suggested Team</a></li>
+          <li><a tabindex="-1" href="#">Add to Other Team</a></li>
+          <li class="dropdown-submenu">
+            <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+              <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+              <li class="dropdown-submenu">
+                <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">3rd level dropdown</a></li>
+                  <li><a href="#">3rd level dropdown</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div></td>
+    </tr>
+  {% endif%}
+{% endfor %}
+<!-- <p>Hey, welcome to this page </p> -->
 
 {% endblock %}
