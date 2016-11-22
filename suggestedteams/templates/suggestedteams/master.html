@@ -157,130 +157,150 @@
 		</div>
 
 		<hr>
-		<div class="container" style="width: 100% border" id="headline" class="col-md-4">
+		<!-- <div class="container" style="width: 100% border" id="headline" class="col-md-4">
 			<font size="3" style="font-family: 'Helevitca Neue'; float: left; padding-left: 10px; color: #FFFFFF">
 				Students Not on a Team
 			</font>
 			<font size="3" style="font-family: 'Helevitca Neue'; padding-left: 10px; color: #FFFFFF">
 				Suggested Team
 			</font>
-			<font size="3" style="font-family: 'Helevitca Neue'; float: right; padding-left: 10px; color: #FFFFFF">
+			<font size="3" style="font-family: 'Helevitca Neue'; float: right; padding-left: 10px; color: #">
 				Action
 			</font>
-		</div>
-
-		<div class="container" style="width: 100% border" id="rcorners2" class="col-md-4">
-
-			<table>
-				<tr>
-					<td>Magazzini Alimentari Riuniti</td>
-					<td>Giovanni Rovelli</td>
-					<td><div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select an action
-						</button>
-						<ul class="dropdown-menu">
-							<li><a tabindex="-1" href="#">Add to Suggested Team</a></li>
-							<li><a tabindex="-1" href="#">Add to Other Team</a></li>
-							<li class="dropdown-submenu">
-								<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-									<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-									<li class="dropdown-submenu">
-										<a class="test" href="#">Another dropdown <span class="caret"></span></a>
-										<ul class="dropdown-menu">
-											<li><a href="#">3rd level dropdown</a></li>
-											<li><a href="#">3rd level dropdown</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div></td>
-				</tr>
-			</table>
-
-		</div>
-
-		<a href="#0" class="cd-btn">Swap</a>
-		<div class="row"><a href="#" id="slide">Show/hide Slide Panel</a></div>
-		<div id="inputs" class="clearfix">
-			<input type="file" id="files" name="files[]" multiple />
-		</div>
-		<hr />
-		<output id="list">
-		</output>
-		<hr />
-		<table id="contents" style="width:100%; height:400px;" border>
-		</table>
-		<!-- your content here -->
-	</main>
-
-	<div class="cd-panel from-right">
-		<header class="cd-panel-header">
-			<h1>Swap team members</h1>
-			<a href="#0" class="cd-panel-close">Close</a>
-		</header>
-
-		<div class="cd-panel-container">
-			<div class="cd-panel-content">
-				<div class="row">
-					<div class="col-md-6">
-						<img style="width:30px;height:30px;vertical-align:middle" src="http://lorempixel.com/output/abstract-q-c-640-480-8.jpg">
-						<span><font style="font-family: 'Shrikhand', cursive; color: black">Carolyn Thio</font></span>
-						<!-- <div class="col-md-6">
-							<img src="headshot.jpg" style="height: 80px;width: 80px">
-						</div>
-
-						<div class="col-md-6">
-							<font size="2" color="blue" style="vertical-align: middle;">This is some text!</font>
-						</div> -->
-					</div>
-
-
-
-				</div>
-				<hr>
-				<div class="row">
-					<div class="col-md-6">
-						<div id="calendar"></div>
-						<script>
-						var unavailableDates = [
-						{start: '2015-09-11', end: '2015-09-15'},
-						{start: '2015-09-15', end: '2015-09-23'},
-						{start: '2015-10-01', end: '2015-10-07'}
-						];
-						$('#calendar').availabilityCalendar(unavailableDates);
-
-						</script>
-					</div>
-
-				</div>
-				<hr>
-
-			</div> <!-- cd-panel-content -->
-		</div> <!-- cd-panel-container -->
-	</div> <!-- cd-panel -->
-</div>
-<div class="col-md-1">
-	<div class="headerDivider"></div>
-</div>
-
-<div class="col-md-4">
-
-	<div class="row">
-		<div class="w3-card" id="rcorners2" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 60px;right: 50px;background: #FFFFFF">
-			<div class="row" style="padding-top: 10px;">
-				<font size="3" style="padding-left: 25px;">View Constraints</font>
+		</div> -->
+		<div class="container" id="headline" class="col-md-4" style="width: 100% border">
+				<font size="3" style="text-align:left;float:left; margin-left: 8px;font-family: 'Helevitca Neue'; color: #FFFFFF">
+					Students Not on a Team
+				</font>
+				<font size="3" style="position: relative;left: -115px;font-family: 'Helevitca Neue'; color: #FFFFFF">
+					Suggested Team
+				</font>
+				<font size="3" style="text-align:right;float:right;position: relative;left: -185px;font-family: 'Helevitca Neue';color: #FFFFFF">
+					Action
+				</font>		
 			</div>
-		</div>
+
+			<div style="width: 100% border;" id="rcorners2" class="col-md-4">
+
+				<table id="studentnoteam" style="overflow:auto; height 150px;">
+					<!-- <tr>
+						<td>Magazzini Alimentari Riuniti</td>
+						<td>Giovanni Rovelli</td>
+						<td>
+						   <select>
+						   		<option>Add to Suggested Team</option>
+						   		<option>Add to Other Team (Team1)</option>
+						   		<option>Add to Other Team (Team3)</option>
+						   		<option>Add to Other Team (Team4)</option>
+						   </select>
+							
+						</td> -->
+						<!-- <div class="dropdown"> -->
+							<!-- <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select an action
+							</button>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="#">Add to Suggested Team</a></li>
+								<li><a tabindex="-1" href="#">Add to Other Team</a></li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+										<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+										<li class="dropdown-submenu">
+											<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">3rd level dropdown</a></li>
+												<li><a href="#">3rd level dropdown</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div> -->
+					<!-- </tr> -->
+				</table>
+			</div>
+
+			<!-- 		<div class="row"><a href="#" id="slide">Show/hide Slide Panel</a></div> -->
+			<div id="inputs" class="clearfix">
+				<input type="file" id="files" name="files[]" multiple />
+			</div>
+		</main>
 
 	</div>
-	<div class="row">
-		<div class="w3-card" id="hidden" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 40px;right: 50px;background: #FFFFFF;margin-top: 50px;">
-			<div class="row">
-				<font size="3" style="">View Constraints</font>
+	<div class="col-md-1">
+		<div class="headerDivider"></div>
+	</div>
+
+	<div class="col-md-4">
+
+		<div class="row">
+			<div class="w3-card" id="rcorners3" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 60px;right: 50px;background: #FFFFFF;">
+				<header>
+					<span class="close">^</span>
+					<h1>View Constraint</h1>
+
+				</header>
+				<hr>
 			</div>
+
+		</div>
+		<div class="row">
+			<div class="w3-card visible" id="hidden" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 40px;right: 50px;background: #FFFFFF;margin-top: 50px;">
+				<header>
+					<span class="close slideout">x</span>
+					<img src="{% static 'headshot.jpg' %}" class="student_image" style="position: relative;top: 10px;"/>
+					<font size="4" style="margin-left: 5px;" id="showname">Name: </font>
+
+				</header>
+				<hr>
+				<div class="w3-container">
+					<p>
+						<h1 style="font-weight: bold;text-align:left;float:left;">Availablity: </h1><h2 id="availability" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Role: </h1><h2 id="role" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Age: </h1><h2 id="age" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Sex: </h1><h2 id="sex" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">GPA: </h1><h2 id="gpa" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Language: </h1><h2 id="language" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Programming Copy: </h1><h2 id="programcopy" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">College: </h1><h2 id="college" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Leadership Preference: </h1><h2 id="leader_pref" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+
+				</div>
+				<hr>
+				<input type="button" value="Edit" class="button-edit" />
+				<input type="button" value="Swap" class="button-swap" />
+				<input type="button" value="Delete" class="button-delete" />
+				<!-- <footer class="w3_container" style="margin-top: 20px; margin-bottom: 10px;">
+					
+
+			</footer> -->
 		</div>
 
 	</div>
@@ -289,13 +309,147 @@
 
 </div>
 <script>
-$(document).ready(function() {
-	if(isAPIAvailable()) {
-		$('#files').bind('change', handleFileSelect);
-	}
-});
 
-function isAPIAvailable() {
+
+	function keepID(element){
+		var hidden = $('#hidden');
+		if (hidden.hasClass('visible')){
+		} else {
+			hidden.animate({"right":"50px"}, "slow").addClass('visible');
+		}
+		var row_id = element.getAttribute("id");
+		var studentRef = firebase.database().ref('student/' + row_id);
+		var showname = document.getElementById("showname");
+		var availability = document.getElementById("availability");
+		var commitment = document.getElementById("commitment");
+		var role = document.getElementById("role");
+		var age = document.getElementById("age");
+		var sex = document.getElementById("sex");
+		var gpa = document.getElementById("gpa");
+		var language = document.getElementById("language");
+		var college = document.getElementById("college");
+		var programcopy = document.getElementById("programcopy");
+		var leader_pref = document.getElementById("leader_pref");
+
+		studentRef.on('value', function(snapshot) {
+			var studentname = snapshot.val().Name;
+			if (studentname != null)
+				showname.innerHTML = studentname;
+			else
+				showname.innerHTML = "To be updated!";
+
+			var studentavailable = snapshot.val().Committment;
+			if (studentavailable != null)
+				availability.innerHTML = studentavailable;
+			else
+				availability.innerHTML = "To be updated!";
+
+			var studentrole = snapshot.val().Leadership;
+			if (studentrole != null)
+				role.innerHTML = studentrole;
+			else
+				role.innerHTML = "To be updated!";
+
+			var studentage = snapshot.val().Age;
+			if (studentage != null)
+				age.innerHTML = studentage;
+			else
+				age.innerHTML = "To be updated!";
+
+			var studentcollege = snapshot.val().Collge;
+			if (studentcollege != null)
+				college.innerHTML = studentcollege;
+			else
+				college.innerHTML = "To be updated!";
+
+			var studentsex = snapshot.val().Sex;
+			if (studentsex != null)
+				sex.innerHTML = studentsex;
+			else
+				sex.innerHTML = "To be updated!";
+
+			var studentgpa = snapshot.val().GPA;
+			if (studentgpa != null)
+				gpa.innerHTML = studentgpa;
+			else
+				gpa.innerHTML = "To be updated!";
+
+			var studentlanguage = snapshot.val().Language;
+			if (studentlanguage != null)
+				language.innerHTML = studentlanguage;
+			else
+				language.innerHTML = "To be updated!";
+			
+			var studentprogrammingcopy = snapshot.val().Programming_Copy_1;
+			if (studentprogrammingcopy != null)
+				programcopy.innerHTML = studentprogrammingcopy;
+			else
+				programcopy.innerHTML = "To be updated!";
+			
+			var studentlanguage = snapshot.val().Language;
+			if (studentlanguage != null)
+				language.innerHTML = studentlanguage;
+			else
+				language.innerHTML = "To be updated!";
+
+			var studentleadershippref = snapshot.val().Leadership_Pref;
+			if (studentleadershippref != null)
+				leader_pref.innerHTML = studentleadershippref;
+			else
+				leader_pref.innerHTML = "To be updated!";
+		});
+
+	}
+
+	window.onload = function() {
+		var table = document.getElementById("studentnoteam");
+		var studentRef = firebase.database().ref('student/').orderByKey();
+		studentRef.once("value")
+		.then(function(snapshot) {
+			snapshot.forEach(function(childSnapshot){
+
+				var student = childSnapshot.val();
+				var new_row = document.createElement('tr');
+				new_row.setAttribute("class", "clickable-row slidein");
+				new_row.setAttribute("id", childSnapshot.key);
+				new_row.setAttribute('onclick','keepID(this)');
+				var new_select = document.createElement('select');
+				var suggested_option = document.createElement('option');
+				suggested_option.innerHTML = "Add to Suggested Team";
+				var other_option = document.createElement('option');
+				other_option.innerHTML = "Add to Other Team(Team 4)";
+				new_select.appendChild(suggested_option);
+				new_select.appendChild(other_option);
+
+			// console.log(childSnapshot.key);
+			var name_cell = document.createElement('td');
+			name_cell.appendChild(document.createTextNode(student.Name));
+			var team_cell = document.createElement('td');
+			team_cell.appendChild(document.createTextNode("Team 2"));
+			var action_cell = document.createElement('td');
+			action_cell.appendChild(new_select);
+			new_row.appendChild(name_cell);
+			new_row.appendChild(team_cell);
+			new_row.appendChild(action_cell);
+			table.appendChild(new_row);
+
+
+
+		});
+		}); 
+		var table = document.getElementById("studentnoteam");
+
+
+
+
+	}
+	$(document).ready(function() {
+		if(isAPIAvailable()) {
+			$('#files').bind('change', handleFileSelect);
+		}
+	});
+
+	function isAPIAvailable() {
       // Check for the various File API support.
       if (window.File && window.FileReader && window.FileList && window.Blob) {
         // Great success! All the File APIs are supported.
@@ -321,19 +475,9 @@ function isAPIAvailable() {
 function handleFileSelect(evt) {
       var files = evt.target.files; // FileList object
       var file = files[0];
-
-      // read the file metadata
-      var output = ''
-      output += '<span style="font-weight:bold;">' + escape(file.name) + '</span><br />\n';
-      output += ' - FileType: ' + (file.type || 'n/a') + '<br />\n';
-      output += ' - FileSize: ' + file.size + ' bytes<br />\n';
-      output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
-
       // read the file contents
       printTable(file);
 
-      // post the results
-      $('#list').append(output);
   }
 
   function printTable(file) {
@@ -374,66 +518,29 @@ function handleFileSelect(evt) {
   	};
   	reader.onerror = function(){ alert('Unable to read ' + file.fileName); };
   }
-  </script>
+</script>
 
 </body>
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 <script>
-                // Initialize Firebase
-                var config = {
-                	apiKey: "AIzaSyBdmOpyHbccBAse4BMNFrQBlFXBZ149kA4",
-                	authDomain: "dogme-fcdd7.firebaseapp.com",
-                	databaseURL: "https://dogme-fcdd7.firebaseio.com",
-                	storageBucket: "dogme-fcdd7.appspot.com",
-                	messagingSenderId: "960834242279"
-                };
-                firebase.initializeApp(config);
-                </script>
+        // Initialize Firebase
+        var config = {
+        	apiKey: "AIzaSyBdmOpyHbccBAse4BMNFrQBlFXBZ149kA4",
+        	authDomain: "dogme-fcdd7.firebaseapp.com",
+        	databaseURL: "https://dogme-fcdd7.firebaseio.com",
+        	storageBucket: "dogme-fcdd7.appspot.com",
+        	messagingSenderId: "960834242279"
+        };
+        firebase.initializeApp(config);
+    </script>
 
-                <script>
-
-
-						/* When the user clicks on the button,
-						toggle between hiding and showing the dropdown content */
-						function myFunction() {
-							document.getElementById("myDropdown").classList.toggle("show");
-						}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-	if (!event.target.matches('.dropbtn')) {
-
-		var dropdowns = document.getElementsByClassName("dropdown-content");
-		var i;
-		for (i = 0; i < dropdowns.length; i++) {
-			var openDropdown = dropdowns[i];
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-			}
-		}
-	}
-}
-$(document).ready(function(){
-	$('#slide').click(function(){
-		var hidden = $('#hidden');
-		if (hidden.hasClass('visible')){
-			hidden.animate({"right":"-1000px"}, "slow").removeClass('visible');
-		} else {
-			hidden.animate({"right":"50px"}, "slow").addClass('visible');
-		}
-	});
-});
+    <script>
 
 
-</script>
-<script>
-
-
-						/* When the user clicks on the button,
-						toggle between hiding and showing the dropdown content */
-						function myFunction() {
-							document.getElementById("myDropdown").classList.toggle("show");
-						}
+    	/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    	function myFunction() {
+    		document.getElementById("myDropdown").classList.toggle("show");
+    	}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -458,8 +565,16 @@ $(document).ready(function(){
 			hidden.animate({"right":"50px"}, "slow").addClass('visible');
 		}
 	});
+	$('.slideout').click(function(){
+		var hidden = $('#hidden');
+		if (hidden.hasClass('visible')){
+			hidden.animate({"right":"-1000px"}, "slow").removeClass('visible');
+		} else {
+		}
+	});
 });
 
 
 </script>
+
 </html>

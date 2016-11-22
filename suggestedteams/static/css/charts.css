@@ -26,6 +26,14 @@
   height: 100%;
   background: #FFFFFF;
 }
+#rcorners3 {
+  border-radius: 25px;
+  border: 2px solid #979797;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+}
 #headline {
   border-radius: 15px;
   border: 2px solid #979797;
@@ -82,17 +90,67 @@
 .clear {
   clear:both;
 }
+
+input.button-edit {
+    background-image: url(../edit.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: 2px solid #979797;         /* assuming we don't want any borders */
+    width: 70px;
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 28px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    position: relative;
+    bottom: 10px;
+    right: -80px;
+}
+input.button-swap {
+    background-image: url(../swap.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: 2px solid #979797;         /* assuming we don't want any borders */
+    width: 70px;
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 28px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    position: relative;
+    bottom: 10px;
+    right: -100px;
+}
+input.button-delete {
+    background-image: url(../delete.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: 2px solid #979797;  
+    width: 70px;       /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 28px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    position: relative;
+    bottom: 10px;
+    right: -120px;
+}
 table {
   font-family: "Helevitca Neue", sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
-
+tr {
+}
+tr:hover{
+  background-color: #b8d1f3;
+}
 td {
-  border-radius: 25px;
-  border: 1px solid #FFFFFF;
+  padding: 7px;
+  width: 50%;
   text-align: left;
-  padding: 8px;
+  white-space: nowrap;
 }
 
 /* Nav Bar */
