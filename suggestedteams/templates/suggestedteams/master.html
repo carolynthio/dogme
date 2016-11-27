@@ -100,54 +100,6 @@
 			<a href="#" class="menu">2</a>
 			<a href="#" class="menu">1</a>
 		</div>
-
-
-		<!-- <h1>Slide In Panel</h1> -->
-		<!-- <div class="row">
-			<div class="panel-group">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<div style="float: left">Team 1 </div>
-							<img src="{% static 'headshot.jpg' %}" class="student_image"/>
-							<img src="{% static 'headshot.jpg' %}" class="student_image"/>
-							<img src="{% static 'headshot.jpg' %}" class="student_image"/>
-							<img src="{% static 'headshot.jpg' %}" class="student_image"/>
-							<img src="{% static 'headshot.jpg' %}" class="student_image"/>
-
-							<button id="chevron" class="collapseRow" data-toggle="collapse" data-target="#collapse1">
-								<i class="fa fa-chevron-down"></i>
-							</button>
-							<a class="calendar" href="#">
-								<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
-							</a>
-							<p class="percent">
-								x%
-							</p>
-						</h4>
-					</div>
-					<div id="collapse1" class="panel-collapse collapse" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<ul class="list-group">
-							<li class="list-group-item" style="height: 30px;">
-								<div class="col-md-3">
-									<font color="black" style="font-family: 'Helevitca Neue';">Name</font>
-								</div>
-								<div class="col-md-3">
-									<font color="black" style="font-family: 'Helevitca Neue';vertical-align: middle;">Availability</font>
-								</div>
-								<div class="col-md-3">
-									<font color="black" style="font-family: 'Helevitca Neue';">Commitment</font>
-								</div>
-								<div class="col-md-3">
-									<font color="black" style="font-family: 'Helevitca Neue';">Role</font>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-		</div> -->
 		<div id="teamList">
 			{% include "suggestedteams/teamList.html" %}
 		</div>
@@ -173,12 +125,10 @@
 
 		</div>
 
-		<a href="#0" class="cd-btn">Swap</a>
 		<form action="#" method="get">
 		 <input type="text" value="3" name="mytextbox" size="1"/>
 		 <input type="submit" class="btn" value="Create Random Teams" name="mybtn">
 		</form>
-		<div class="row"><a href="#" id="slide">Show/hide Slide Panel</a></div>
 
 		<form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
 				{% csrf_token %}
@@ -256,11 +206,52 @@
 
 	<div class="row">
 		<div class="w3-card" id="rcorners2" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 60px;right: 50px;background: #FFFFFF">
-			<div class="row" style="padding-top: 10px;">
-				<font size="3" style="padding-left: 25px;">View Constraints</font>
+			<div class="row" style="padding-top: 10px; padding-bottom: 10px; background-color: #2B3F54">
+				<font size="3" style="padding-left: 25px; color: white;">View Constraints</font>
 			</div>
+			<button id="addConstraint"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Constraint </button>
 		</div>
 
+	</div>
+	<div id="constraintModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+		    <span class="close">×</span>
+		    <h2>Customize Constraints</h2>
+	  	</div>
+			<div class="modal-body">
+				<div class="column-center">
+					Remaining constraints
+					<ul id="remainingConstraints">
+						<li class="list-group-item clickable-row">
+							Number of students per team
+						</li>
+						<li class="list-group-item clickable-row">
+							Number of hours available
+						</li>
+						<li class="list-group-item clickable-row">
+							Leadership distribution
+						</li>
+						<li class="list-group-item clickable-row">
+							Balance of gender
+						</li>
+						<li class="list-group-item clickable-row">
+							Topic(s) of interest
+						</li>
+					</ul>
+				</div>
+			  <div class="column-left"></div>
+			  <div class="column-right">
+					Current constraints
+					<div id=currentConstraints>
+					</div>
+				</div>
+				<div id="modalButtons">
+					<button> Save Changes </button>
+					<button> Cancel </button>
+				</div>
+		  </div>
+  	</div>
 	</div>
 	<div class="row">
 			<div class="w3-card visible" id="hidden" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 40px;right: 50px;background: #FFFFFF;margin-top: 50px;">

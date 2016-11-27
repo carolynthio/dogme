@@ -39,7 +39,8 @@
                 </div>
               </li>
               {% for person in team %}
-              <li class="list-group-item" style="height: 30px;">
+              <li class="list-group-item clickable-row" style="height: 30px;" id={{person.id}} name={{person.name}} sex={{person.sex}} role={{person.role}}
+                  schedule={{person.schedule}} leadershipPref={{person.leadership_pref}} onclick=keepID(this)>
                 <div class="col-md-3">
                   <font color="black" style="font-family: 'Helevitca Neue';">{{person.name}}</font>
                 </div>
