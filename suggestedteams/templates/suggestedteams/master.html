@@ -39,7 +39,9 @@
 </head>
 <body>
 	<div id="titlebar">
-		<font size="5" style="font-family: 'Helevitca Neue'; padding-left: 100px;padding-top: 20px; color: #2B3F54">
+		<font size="5" style="font-family: 'Helevitca Neue'; padding-left: 100px;
+		text-align: center; vertical-align: middle; line-height: 50px; color: #2B3F54">
+			<i class="fa fa-paw"></i>
 			TFTi
 		</font>
 	</div>
@@ -101,7 +103,7 @@
 
 
 		<!-- <h1>Slide In Panel</h1> -->
-		<div class="row">
+		<!-- <div class="row">
 			<div class="panel-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -141,13 +143,14 @@
 								</div>
 							</li>
 						</ul>
-						<!-- <div class="panel-footer">Footer</div> -->
 					</div>
 				</div>
 			</div>
 
+		</div> -->
+		<div id="teamList">
+			{% include "suggestedteams/teamList.html" %}
 		</div>
-
 		<hr>
 		<div class="container" style="width: 100% border" id="headline" class="col-md-4">
 			<font size="3" style="font-family: 'Helevitca Neue'; float: left; padding-left: 10px; color: #FFFFFF">
@@ -171,13 +174,21 @@
 		</div>
 
 		<a href="#0" class="cd-btn">Swap</a>
+		<form action="#" method="get">
+		 <input type="text" value="3" name="mytextbox" size="1"/>
+		 <input type="submit" class="btn" value="Create Random Teams" name="mybtn">
+		</form>
 		<div class="row"><a href="#" id="slide">Show/hide Slide Panel</a></div>
-		<form action="/suggestedteams/" method="post" enctype="multipart/form-data">
-			{% csrf_token %}
 
-			<input type="file" name="csv_file" />
-			<input type="submit" value="Upload" />
-
+		<form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<p>{{ form.non_field_errors }}</p>
+				<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+				<p>
+						{{ form.docfile.errors }}
+						{{ form.docfile }}
+				</p>
+				<p><input type="submit" value="Upload" /></p>
 		</form>
 		<!-- Firebase things -->
 		<!-- <div id="inputs" class="clearfix">
@@ -252,10 +263,61 @@
 
 	</div>
 	<div class="row">
-		<div class="w3-card" id="hidden" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 40px;right: 50px;background: #FFFFFF;margin-top: 50px;">
-			<div class="row">
-				<font size="3" style="">View Constraints</font>
-			</div>
+			<div class="w3-card visible" id="hidden" style="width: 100%;height: 350px;z-index: 2;position: relative;top: 40px;right: 50px;background: #FFFFFF;margin-top: 50px;">
+				<header>
+					<span class="close slideout">x</span>
+					<img src="{% static 'headshot.jpg' %}" class="student_image" style="position: relative;top: 10px;"/>
+					<font size="4" style="margin-left: 5px;" id="showname">Name: </font>
+
+				</header>
+				<hr>
+				<div class="w3-container">
+					<p>
+						<h1 style="font-weight: bold;text-align:left;float:left;">Availablity: </h1><h2 id="availability" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Role: </h1><h2 id="role" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Age: </h1><h2 id="age" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Sex: </h1><h2 id="sex" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">GPA: </h1><h2 id="gpa" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Language: </h1><h2 id="language" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Programming Copy: </h1><h2 id="programcopy" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">College: </h1><h2 id="college" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+					<p style="margin-top: 5px;">
+						<h1 style="font-weight: bold;text-align:left;float:left;">Leadership Preference: </h1><h2 id="leader_pref" style="text-align:right;float:right;margin-right: 10px;"></h2>
+					</p>
+					<div style="clear:both;"></div>
+
+				</div>
+				<hr>
+				<input type="button" value="Edit" class="button-edit">
+				<input type="button" value="Swap" class="button-swap" />
+				<input type="button" value="Delete" class="button-delete" />
+				<!-- <footer class="w3_container" style="margin-top: 20px; margin-bottom: 10px;">
+
+
+			</footer> -->
 		</div>
 
 	</div>
@@ -276,4 +338,114 @@
     firebase.initializeApp(config);
 </script> -->
 
+<script>
+function keepID(element){
+		var hidden = $('#hidden');
+		if (hidden.hasClass('visible')){
+		} else {
+			hidden.animate({"right":"50px"}, "slow").addClass('visible');
+		}
+		var row_id = element.getAttribute("id");
+		// var studentRef = firebase.database().ref('student/' + row_id);
+		// var studentRef = "{{students}}";
+		var showname = document.getElementById("showname");
+		var availability = document.getElementById("availability");
+		// var commitment = document.getElementById("commitment");
+		var role = document.getElementById("role");
+		// var age = document.getElementById("age");
+		var sex = document.getElementById("sex");
+		// var gpa = document.getElementById("gpa");
+		// var language = document.getElementById("language");
+		// var college = document.getElementById("college");
+		// var programcopy = document.getElementById("programcopy");
+		var leader_pref = document.getElementById("leader_pref");
+
+		// studentRef.on('value', function(snapshot) {
+			var studentname = element.getAttribute("name");
+			if (studentname != null)
+				showname.innerHTML = studentname;
+			else
+				showname.innerHTML = "To be updated!";
+
+			// var studentavailable = snapshot.val().Committment;
+			// if (studentavailable != null)
+			// 	availability.innerHTML = studentavailable;
+			// else
+			// 	availability.innerHTML = "To be updated!";
+
+			var studentrole = element.getAttribute("role");
+			if (studentrole != null)
+				role.innerHTML = studentrole;
+			else
+				role.innerHTML = "To be updated!";
+
+			// var studentage = snapshot.val().Age;
+			// if (studentage != null)
+			// 	age.innerHTML = studentage;
+			// else
+			// 	age.innerHTML = "To be updated!";
+
+			// var studentcollege = snapshot.val().Collge;
+			// if (studentcollege != null)
+			// 	college.innerHTML = studentcollege;
+			// else
+			// 	college.innerHTML = "To be updated!";
+
+			var studentsex = element.getAttribute("sex");
+			if (studentsex != null)
+				sex.innerHTML = studentsex;
+			else
+				sex.innerHTML = "To be updated!";
+
+			// var studentgpa = snapshot.val().GPA;
+			// if (studentgpa != null)
+			// 	gpa.innerHTML = studentgpa;
+			// else
+			// 	gpa.innerHTML = "To be updated!";
+
+			// var studentlanguage = snapshot.val().Language;
+			// if (studentlanguage != null)
+			// 	language.innerHTML = studentlanguage;
+			// else
+			// 	language.innerHTML = "To be updated!";
+
+			// var studentprogrammingcopy = snapshot.val().Programming_Copy_1;
+			// if (studentprogrammingcopy != null)
+			// 	programcopy.innerHTML = studentprogrammingcopy;
+			// else
+			// 	programcopy.innerHTML = "To be updated!";
+			//
+			// var studentlanguage = snapshot.val().Language;
+			// if (studentlanguage != null)
+			// 	language.innerHTML = studentlanguage;
+			// else
+			// 	language.innerHTML = "To be updated!";
+
+			var studentleadershippref = element.getAttribute("leadershipPref");
+			if (studentleadershippref != null)
+				leader_pref.innerHTML = studentleadershippref;
+			else
+				leader_pref.innerHTML = "To be updated!";
+		// });
+
+	}
+
+	$(document).ready(function(){
+	$('#slide').click(function(){
+		var hidden = $('#hidden');
+		if (hidden.hasClass('visible')){
+			hidden.animate({"right":"-1000px"}, "slow").removeClass('visible');
+		} else {
+			hidden.animate({"right":"50px"}, "slow").addClass('visible');
+		}
+	});
+	$('.slideout').click(function(){
+		var hidden = $('#hidden');
+		if (hidden.hasClass('visible')){
+			hidden.animate({"right":"-1000px"}, "slow").removeClass('visible');
+		} else {
+		}
+	});
+});
+</script>
 </html>

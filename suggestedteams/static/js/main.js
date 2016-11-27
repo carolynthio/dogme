@@ -11,6 +11,14 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 		}
 	});
+
+	// Create random Teams
+	$("#randomTeamsButton").click(function() {
+		console.log("here");
+		$.get("/suggestedteams/", function(data) {
+	        $("#myOutput").html(data);
+	    }, "html");
+	});
 });
 
 // Navigation Bar

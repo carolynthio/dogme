@@ -10,6 +10,13 @@ class Document(models.Model):
     # name, datatype, constraint
     docfile = models.FileField(upload_to='documents/%Y/%m/%d')
 
+class Student(models.Model):
+    name = models.TextField()
+    role = models.CharField(max_length=30)
+    leadership_pref = models.TextField()
+    sex = models.CharField(max_length=10)
+    schedule = models.TextField()
+
     # In order to list all the post titles making it a string
     # def __unicode__(self):
     #     return self.name

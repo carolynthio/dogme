@@ -6,7 +6,7 @@
     </head>
     <body>
     <!-- List of uploaded documents -->
-    {% if documents %}
+    <!-- {% if documents %}
         <ul>
         {% for document in documents %}
             <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
@@ -14,7 +14,12 @@
         </ul>
     {% else %}
         <p>No documents.</p>
-    {% endif %}
+    {% endif %} -->
+    {% for row in reader %}
+      {% if row.0 and row.0 != 'Name' %}
+        {{ row.0 }}
+      {% endif%}
+    {% endfor %}
 
         <!-- Upload form. Note enctype attribute! -->
         <form action="{% url 'list' %}" method="post" enctype="multipart/form-data">

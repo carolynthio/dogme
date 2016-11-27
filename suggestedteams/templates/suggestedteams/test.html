@@ -8,13 +8,17 @@
 {{ another.a }}
 {{ another.b }}
 {{ one }} -->
-{% for row in reader %}
-  {% if row.0 and row.0 != 'Name' %}
+<!-- {% for d in documents %}
+  {{d.docfile}}
+{% endfor %} -->
+{% for s in students %}
+  {% if s.name and s.name != 'Name' %}
     <!-- <li class="list-group-item">{{ row.0 }}</li> -->
-    <tr>
-      <td>{{ row.0 }}</td>
+    <tr class="clickable-row" id={{s.id}} name={{s.name}} sex={{s.sex}} role={{s.role}}
+        schedule={{s.schedule}} leadershipPref={{s.leadership_pref}} onclick=keepID(this)>
+      <td>{{ s.name }}</td>
       <td>Team 1</td>
-      <td style="float: right;"><div class="dropdown">
+      <td><div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select an action
         </button>
         <ul class="dropdown-menu">
